@@ -1,16 +1,19 @@
 # Generating UniqueId's 
 
+import textwrap
+import string
+import random
+from random import randint
 
-# import string
-# import random
-# from random import randint
-
-# def random_digit_generate(length):
-#     key=""
-#     for i in range(length):
-#         key = key+random.choice(string.digits)
-#     return key
-# result=random_digit_generate(16)
+def random_digit_generate(length):
+    key=""
+    for i in range(length):
+        key = key+random.choice(string.digits)
+    return key
+result=random_digit_generate(16)
+g=textwrap.wrap(result,3)
+r1="-".join(g)
+print(r1)
 # print("TXN"+result)
 # print(randint(1,9))
 
@@ -24,5 +27,7 @@ toNumber=input("enter num:")
 toNumber = toNumber.replace(" ",'').replace("-","").replace("(","").replace(")","")
 print(toNumber)
 print(type(toNumber))
+
+
 
 
