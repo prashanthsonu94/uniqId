@@ -8,9 +8,11 @@ from random import randint
 def random_digit_generate(length):
     key=""
     for i in range(length):
-        key = key+random.choice(string.digits)
+        # key = key+random.choice(string.digits)                     #Generating random 16 digit number
+        key = key+random.choice(string.ascii_lowercase)                #Generating random 12 digit alphabet seperating with specified "string"
     return key
-result=random_digit_generate(16)
+# result=random_digit_generate(16)
+result=random_digit_generate(12)
 g=textwrap.wrap(result,3)
 r1="-".join(g)
 print(r1)
